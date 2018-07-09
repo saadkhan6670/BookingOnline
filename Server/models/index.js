@@ -34,3 +34,5 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+// https://www.youtube.com/watch?v=zK-xOleHopE&index=5&list=PLIGDNOJWiL1-OJp8ZWBO2838ENa0tsy6H
