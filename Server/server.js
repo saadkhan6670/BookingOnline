@@ -4,9 +4,9 @@ var bodyParser = require('body-parser');
 var app = express();
 const Sequelize = require('sequelize');
 var cors = require('cors');
-var port = 5000;
+var port = process.env.PORT || 5000;
 
-// require('./api/model')
+var db = require('./models');
 
 // const sequelize = new Sequelize('bookingonline', 'root', "", {
 //   host: 'localhost',
@@ -39,7 +39,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static('public'));
 app.use('/api', require('./api'));
 
-
-app.listen(port, function () {
+db.sequelize.sync().then(function(){
+  app.listen(port, function () {
   console.log('Running server on ' + port);
 });
+})
