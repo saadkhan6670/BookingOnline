@@ -13,9 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static('public'));
 app.use('/api', require('./api'));
 
-db.sequelize.sync().then(function(){
+
   app.listen(port, function () {
     console.log('Running server on ' + port);
   });
-})
  
