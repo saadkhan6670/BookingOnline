@@ -9,13 +9,12 @@ exports.SearchAll = (req, res) => {
 };
 
 exports.HotelBooking = (req, res) => {
-    postBody = requestHelper.parseBody(req.body);
 
     models.bookHotels.create({
-        nic_id: postBody.nic_id,
-        hotel_id: postBody.hotel_id,
-        book_from: postBody.book_from,
-        book_to: postBody.book_to
+        nic_id: req.body.nic_id,
+        hotel_id: req.body.hotel_id,
+        book_from: req.body.book_from,
+        book_to: req.body.book_to
     }).then(function (booking) {
         res.json(booking);
     });
@@ -26,3 +25,16 @@ exports.GetBooking = (req, res) => {
         res.json(hotels);
     });
 };
+
+exports.SpecificHotels = (req, res) => {
+
+    models.hotels.findAll({
+        where:{
+            country: req.body.country
+        }
+    }).then(function (hotels) {
+        res.json(hotels);
+    });
+};
+
+
