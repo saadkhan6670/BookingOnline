@@ -35,6 +35,7 @@ exports.SpecificHotels = (req, res) => {
     }).then(function (hotels) {
         res.json(hotels);
     });
+
 };
 
 

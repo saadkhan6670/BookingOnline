@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FlighLookup } from '../shared/models/flightLookup';
+import { LookupService } from '../shared/services/lookup.service';
+import { Hotel } from '../shared/models/hotel';
 
 @Component({
   selector: 'app-home',
@@ -6,14 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  flightLookupObj = new FlighLookup;
   bsValue = new Date();
-  bsRangeValue: Date[];
   maxDate = new Date();
-  constructor() { 
+  hotels : Hotel[];
+  constructor(private _lookupService:LookupService) { 
     this.maxDate.setDate(this.maxDate.getDate() + 7);
-    this.bsRangeValue = [this.bsValue, this.maxDate];
+    this.flightLookupObj.bsRangeValue = [this.bsValue, this.maxDate];
   }
-  selected: string;
+
   states: string[] = [
     'Alabama',
     'Alaska',
@@ -68,6 +73,13 @@ export class HomeComponent implements OnInit {
   ];
 
   ngOnInit() {
+  }
+
+  submitLookup(){
+    this._lookupService.flightLookup(this.flightLookupObj).subscribe((res:Hotel[])=>{
+      console.log(res)
+      this.hotels=res;
+    })
   }
 
 }

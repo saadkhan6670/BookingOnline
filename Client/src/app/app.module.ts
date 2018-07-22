@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule,BsDatepickerModule,TypeaheadModule, BsDropdownModule  } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
 
@@ -25,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CarouselModule.forRoot(),
     BsDatepickerModule.forRoot(),
     FormsModule,TypeaheadModule.forRoot(),

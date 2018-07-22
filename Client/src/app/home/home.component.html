@@ -26,7 +26,7 @@
 									<div class="form-group">
 										<label for="date">Where:</label>
 										<div class="form-field">
-											<input type="text" id="location" [(ngModel)]="selected"
+											<input type="text" id="location" [(ngModel)]="flightLookupObj.location"
 											[typeahead]="states"
 											class="form-control" placeholder="Search Location" >
 										</div>
@@ -37,7 +37,7 @@
 										<div class="form-field">
 											
 													<div class="form-group">
-													  <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+													  <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue">
 													</div>
 													<!-- <div class="col-xs-12 col-12 col-md-3 form-group">
 													  <button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen">Date Range Picker</button>
@@ -50,18 +50,18 @@
 										<label for="guests">Guest</label>
 										<div class="form-field">
 											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#">1</option>
-												<option value="#">2</option>
-												<option value="#">3</option>
-												<option value="#">4</option>
-												<option value="#">5+</option>
+											<select name="people" id="people" [(ngModel)]="flightLookupObj.guest" class="form-control">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5+</option>
 											</select>
 										</div>
 									</div>
 								</div>
 								<div class="col-md-2">
-									<input type="submit" name="submit" id="submit" value="Find Flights" class="btn btn-primary btn-block">
+									<input name="submit" id="submit" (click)="submitLookup()" value="Find Flights" class="btn btn-primary btn-block">
 								</div>
 							</div>
 						</div>
