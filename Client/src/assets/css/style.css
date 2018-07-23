@@ -1,8 +1,3 @@
-/* =======================================================
-*
-* 	Template Style 
-*
-* ======================================================= */
 body {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
@@ -206,7 +201,12 @@ h1, h2, h3, h4, h5, h6, figure {
   overflow: hidden; }
   @media screen and (max-width: 992px) {
     .colorlib-video {
-      height: 450px; } }
+      height: 450px; } 
+     .search-wrap {
+            margin-top: 0em !important;
+     opacity:1;
+      }
+    }
   .colorlib-video a {
     z-index: 1001;
     position: absolute;
@@ -418,10 +418,11 @@ h1, h2, h3, h4, h5, h6, figure {
   #colorlib-reservation .search-wrap {
     width: 100%;
     float: left;
-    display: block;
+    /* display: block; */
+    margin-top: -30%;
+    /* opacity: 0.9; */
     position: relative;
     z-index: 9;
-    margin-top: -4em !important;
     padding: 0; }
   #colorlib-reservation .booknow {
     margin-top: 5px;
@@ -456,7 +457,9 @@ h1, h2, h3, h4, h5, h6, figure {
           padding: 10px !important; } }
   #colorlib-reservation .tab-content {
     background: #2C2E3E;
-    padding: 30px 60px; }
+    padding: 25px 61px; 
+    opacity: 0.9;
+  }
 
 .colorlib-form label {
   font-weight: normal;
@@ -1875,15 +1878,3 @@ input[type="text"] {
 .nopadding {
   padding: 0 !important;
   margin: 0 !important; }
-
-/* .colorlib-loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url(../images/loader.gif) center no-repeat #fff; } */
-
-.js .animate-box {
-  opacity: 0; }
