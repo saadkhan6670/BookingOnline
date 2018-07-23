@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #FFDD00; }
 
 .colorlib-nav {
-  background-color: #2C2E3E;
+ opacity: 0.8;
   margin: 0;
   position: absolute;
   top: 0;
@@ -386,7 +386,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   display: block;
   float: left;
-  padding: 9em 0;
+  padding: 5em 0;
   clear: both; }
   @media screen and (max-width: 768px) {
     #colorlib-hotel,

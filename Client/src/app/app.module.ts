@@ -8,20 +8,22 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { HotelsListComponent } from './hotels-list/hotels-list.component';
-import { HotelDisplayComponent } from './hotel-display/hotel-display.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HotelsListComponent,
-    HotelDisplayComponent,
+    
     NavigationComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
