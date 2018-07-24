@@ -1,70 +1,67 @@
-
-
-<div id="page">	
+<div id="page">
 
 	<div id="colorlib-reservation">
 		<div class="row">
-				<carousel>
-						<slide>
-						  <img src="../../assets/images/cover-img-1.jpg" alt="first slide" style="display: block; width: 100%;">
-						</slide>
-						<slide>
-						  <img src="../../assets/images/cover-img-2.jpg" alt="second slide" style="display: block; width: 100%; ">
-						</slide>
-						<slide>
-						  <img src="../../assets/images/cover-img-3.jpg" alt="third slide" style="display: block; width: 100%; ">
-						</slide>
-					  </carousel>
+			<carousel>
+				<slide>
+					<img src="../../assets/images/cover-img-1.jpg" alt="first slide" style="display: block; width: 100%;">
+				</slide>
+				<slide>
+					<img src="../../assets/images/cover-img-2.jpg" alt="second slide" style="display: block; width: 100%; ">
+				</slide>
+				<slide>
+					<img src="../../assets/images/cover-img-3.jpg" alt="third slide" style="display: block; width: 100%; ">
+				</slide>
+			</carousel>
 			<div class="search-wrap">
 				<div class="tab-content">
-				
-						<div class="colorlib-form">
-							<div class="row">
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="date">Where:</label>
-										<div class="form-field">
-											<input type="text" id="location" [(ngModel)]="flightLookupObj.location"
-											[typeahead]="states"
-											class="form-control" placeholder="Search Location" >
-										</div>
+
+					<div class="colorlib-form">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="date">Where:</label>
+									<div class="form-field">
+										<input type="text" id="location" [(ngModel)]="flightLookupObj.location" [typeahead]="states" class="form-control" placeholder="Search Location">
 									</div>
-								</div>
-								<div class="col-md-3">
-										<label for="date">Date Picker</label>
-										<div class="form-field">
-											
-													<div class="form-group">
-													  <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue">
-													</div>
-													<!-- <div class="col-xs-12 col-12 col-md-3 form-group">
-													  <button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen">Date Range Picker</button>
-													</div> -->
-												 </div>
-								
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="guests">Guest</label>
-										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" [(ngModel)]="flightLookupObj.guest" class="form-control">
-												<option value="1" style="background-color: #333544;">1</option>
-												<option value="2"   style="background-color: #333544;">2</option>
-												<option value="3"  style="background-color: #333544;">3</option>
-												<option value="4"  style="background-color: #333544;">4</option>
-												<option value="5"  style="background-color: #333544;">5+</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<input name="submit" id="submit" (click)="submitLookup()" value="Find Hotels" class="btn btn-primary btn-block">
 								</div>
 							</div>
+							<div class="col-md-3">
+								<label for="date">Date Picker</label>
+								<div class="form-field">
+
+									<div class="form-group">
+										<input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue " [minDate]="minDate"
+										 [maxDate]="maxDate" [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+									</div>
+									<!-- <div class="col-xs-12 col-12 col-md-3 form-group">
+													  <button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen">Date Range Picker</button>
+													</div> -->
+								</div>
+
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="guests">Guest</label>
+									<div class="form-field">
+										<i class="icon icon-arrow-down3"></i>
+										<select name="people" id="people" [(ngModel)]="flightLookupObj.guest" class="form-control">
+											<option value="1" style="background-color: #333544;">1</option>
+											<option value="2" style="background-color: #333544;">2</option>
+											<option value="3" style="background-color: #333544;">3</option>
+											<option value="4" style="background-color: #333544;">4</option>
+											<option value="5" style="background-color: #333544;">5+</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<input name="submit" id="submit" (click)="submitLookup()" value="Find Hotels" class="btn btn-primary btn-block">
+							</div>
 						</div>
-				
-					
+					</div>
+
+
 				</div>
 			</div>
 		</div>

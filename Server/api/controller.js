@@ -27,10 +27,11 @@ exports.GetBooking = (req, res) => {
 };
 
 exports.SpecificHotels = (req, res) => {
+    // console.log(req.body.location)
 
     models.hotels.findAll({
         where:{
-            country: req.body.country
+            city: req.body.location
         }
     }).then(function (hotels) {
         res.json(hotels);
