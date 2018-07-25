@@ -471,11 +471,16 @@ h1, h2, h3, h4, h5, h6, figure {
           padding: 10px !important; } }
   #colorlib-reservation .tab-content {
     background: #2C2E3E;
-    padding: 25px 61px; 
+    padding: 25px 189px; 
     opacity: 0.9;
   }
+  input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 3;
+}
 
 .colorlib-form label {
+  font-size: larger;
   font-weight: normal;
   color: white; }
 
@@ -534,8 +539,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .colorlib-form .btn-block {
   margin-top: 28px;
+      height: 50px;
   padding: 12px !important;
-  font-size: 14px;
+  font-size: 18px;
   color: #000; }
 
 .services {
@@ -1474,7 +1480,7 @@ input[type="text"] {
   padding: 14px; }
 
 #colorlib-footer {
-  background: #2C2E3E;
+  /* background: #2C2E3E; */
   color: rgba(255, 255, 255, 0.5) !important; }
   #colorlib-footer .colorlib-footer-links {
     padding: 0;

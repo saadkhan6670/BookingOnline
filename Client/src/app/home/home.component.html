@@ -33,22 +33,18 @@
 									<div class="form-group">
 										<input class="form-control" #drp="bsDaterangepicker" 
 										bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue" 
-										[minDate]="minDate" >
+										[minDate]="minDate" Class="theme-red">
 									</div>
-									<!-- <div class="col-xs-12 col-12 col-md-3 form-group">
-													  <button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen">Date Range Picker</button>
-													</div> -->
-								</div>
-								<rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly" style="    font-size: 31px; color: goldenrod;"></rating>
-								
+
+								</div>								
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="guests">Guest</label>
 									<div class="form-field">
-										<i class="icon icon-arrow-down3"></i>
+										<i class="dropdown-menu"></i>
 										<select name="people" id="people" [(ngModel)]="flightLookupObj.guest" class="form-control">
-											<option value="1" style="background-color: #333544;">1</option>
+											<option value="1" style="background-color: #333544; ">1</option>
 											<option value="2" style="background-color: #333544;">2</option>
 											<option value="3" style="background-color: #333544;">3</option>
 											<option value="4" style="background-color: #333544;">4</option>
@@ -58,7 +54,7 @@
 								</div>
 							</div>
 							<div class="col-md-2">
-								<button type="submit" name="Submit" id="submit" (click)="submitLookup()" value="Find Hotels" class="btn btn-primary btn-block"> </button>
+								<button type="submit" name="Submit" id="submit" (click)="submitLookup()" class="btn btn-primary btn-block">Find Hotels </button>
 							</div>
 						</div>
 					</div>
@@ -218,33 +214,4 @@
 			</span>
 		</a>
 	</div>
-</div>
-
-<div id="colorlib-subscribe" style="background-image: url(../../assets/images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-				<h2>Sign Up for a Newsletter</h2>
-				<p>Sign up for our mailing list to get latest updates and offers.</p>
-				<form class="form-inline qbstp-header-subscribe">
-					<div class="row">
-						<div class="col-md-12 col-md-offset-0">
-							<div class="form-group">
-								<input type="text" class="form-control" id="email" placeholder="Enter your email">
-								<button type="submit" class="btn btn-primary">Subscribe</button>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="gototop js-top">
-	<a href="#" class="js-gotop">
-		<i class="icon-arrow-up2"></i>
-	</a>
 </div>

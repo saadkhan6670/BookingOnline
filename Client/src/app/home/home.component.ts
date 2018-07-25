@@ -1,8 +1,8 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FlighLookup } from '../shared/models/flightLookup';
 import { LookupService } from '../shared/services/lookup.service';
 import { Hotel } from '../shared/models/hotel';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 import * as moment from 'moment';
 
 @Component({
@@ -15,50 +15,45 @@ export class HomeComponent implements OnInit {
   flightLookupObj = new FlighLookup;
   bsValueto = new Date();
   bsValuefrom = new Date();
-  hotels : Hotel[];
+  hotels: Hotel[];
   minDate = new Date();
 
-  										
-  max: number = 5;
-  rate: number = 2;
-  isReadonly: boolean = true;
+  // max: number = 5;
+  // rate: number = 2;
+  // isReadonly: boolean = true;
 
-  constructor(private _lookupService:LookupService, private router: Router) {
-    this.flightLookupObj.bsRangeValue = [this.bsValueto ,this.bsValuefrom];
+  constructor(private _lookupService: LookupService, private router: Router) {
+
+    this.flightLookupObj.bsRangeValue = [this.bsValueto, this.bsValuefrom];
   }
 
   states: string[] = [
     "Karachi",
-    "Lahore", 
+    "Lahore",
     "Faisalabad",
     "Rawalpindi",
     "Multan",
     "Hyderabad",
     "Gujranwala",
-    "Peshawar",   
+    "Peshawar",
     "Quetta",
-      "Islamabad"
+    "Islamabad"
   ];
 
   ngOnInit() {
   }
 
-  submitLookup(){
-    // moment(this.flightLookupObj.bsRangeValue[0]).format('L').push(this.flightLookupObj.bsRangeValue; 
-  //  this.maxDate = moment(this.maxDate).format('L')
-    // this._lookupService.flightLookup(this.flightLookupObj);
-    // this.bsValue =  moment(this.bsValue).format('L')
+  submitLookup() {
 
-    // console.log("from hre" ,this.bsValue);
     // console.log("from hre"  moment(this.maxDate).format('L'));
 
-    
-    console.log(this.flightLookupObj.bsRangeValue[0]);
-
-
-  //   this.router.navigate(['/hotel-list'], { queryParams: { location: this.flightLookupObj.location, from: this.flightLookupObj.bsRangeValue} });
+    this.router.navigate(['/hotel-list'], {
+      queryParams: {
+        location: this.flightLookupObj.location,
+        from: this.flightLookupObj.bsRangeValue[0],
+        to: this.flightLookupObj.bsRangeValue[1],
+        guest : this.flightLookupObj.guest
+      }
+    });
   }
-
-
-
 }

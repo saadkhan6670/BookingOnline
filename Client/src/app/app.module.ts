@@ -18,7 +18,6 @@ import { RatingModule } from 'ngx-bootstrap';
     AppComponent,
     HomeComponent,
     HotelsListComponent,
-    
     NavigationComponent,
     AboutComponent,
     ContactComponent,
@@ -33,6 +32,7 @@ import { RatingModule } from 'ngx-bootstrap';
     FormsModule,TypeaheadModule.forRoot(),
     BsDropdownModule.forRoot(),
     RatingModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
