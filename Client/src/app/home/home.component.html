@@ -31,14 +31,16 @@
 								<div class="form-field">
 
 									<div class="form-group">
-										<input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue " [minDate]="minDate"
-										 [maxDate]="maxDate" [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+										<input class="form-control" #drp="bsDaterangepicker" 
+										bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue" 
+										[minDate]="minDate" >
 									</div>
 									<!-- <div class="col-xs-12 col-12 col-md-3 form-group">
 													  <button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen">Date Range Picker</button>
 													</div> -->
 								</div>
-
+								<rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly" style="    font-size: 31px; color: goldenrod;"></rating>
+								
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
@@ -56,7 +58,7 @@
 								</div>
 							</div>
 							<div class="col-md-2">
-								<input name="submit" id="submit" (click)="submitLookup()" value="Find Hotels" class="btn btn-primary btn-block">
+								<button type="submit" name="Submit" id="submit" (click)="submitLookup()" value="Find Hotels" class="btn btn-primary btn-block"> </button>
 							</div>
 						</div>
 					</div>

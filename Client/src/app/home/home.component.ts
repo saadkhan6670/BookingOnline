@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { FlighLookup } from '../shared/models/flightLookup';
 import { LookupService } from '../shared/services/lookup.service';
 import { Hotel } from '../shared/models/hotel';
@@ -13,15 +13,18 @@ import * as moment from 'moment';
 export class HomeComponent implements OnInit {
 
   flightLookupObj = new FlighLookup;
-  bsValue = new Date();
-  maxDate = new Date();
+  bsValueto = new Date();
+  bsValuefrom = new Date();
   hotels : Hotel[];
+  minDate = new Date();
 
-  constructor(private _lookupService:LookupService, private router: Router) { 
-    
-    this.maxDate.setDate(this.maxDate.getDate() + 7);
-    this.flightLookupObj.bsRangeValue = [this.bsValue, this.maxDate];
- 
+  										
+  max: number = 5;
+  rate: number = 2;
+  isReadonly: boolean = true;
+
+  constructor(private _lookupService:LookupService, private router: Router) {
+    this.flightLookupObj.bsRangeValue = [this.bsValueto ,this.bsValuefrom];
   }
 
   states: string[] = [
@@ -41,10 +44,17 @@ export class HomeComponent implements OnInit {
   }
 
   submitLookup(){
+    // moment(this.flightLookupObj.bsRangeValue[0]).format('L').push(this.flightLookupObj.bsRangeValue; 
+  //  this.maxDate = moment(this.maxDate).format('L')
     // this._lookupService.flightLookup(this.flightLookupObj);
-    let myMoment: moment.Moment = moment(this.bsValue);
-    console.log(this.bsValue,this.maxDate,this.flightLookupObj.bsRangeValue);
-    console.log(myMoment)
+    // this.bsValue =  moment(this.bsValue).format('L')
+
+    // console.log("from hre" ,this.bsValue);
+    // console.log("from hre"  moment(this.maxDate).format('L'));
+
+    
+    console.log(this.flightLookupObj.bsRangeValue[0]);
+
 
   //   this.router.navigate(['/hotel-list'], { queryParams: { location: this.flightLookupObj.location, from: this.flightLookupObj.bsRangeValue} });
   }

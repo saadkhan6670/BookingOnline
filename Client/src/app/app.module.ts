@@ -12,8 +12,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-
-
+import { RatingModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     CarouselModule.forRoot(),
     BsDatepickerModule.forRoot(),
     FormsModule,TypeaheadModule.forRoot(),
-    BsDropdownModule.forRoot()
-
+    BsDropdownModule.forRoot(),
+    RatingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
