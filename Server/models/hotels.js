@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     rating: DataTypes.DOUBLE,
     reviews: DataTypes.INTEGER,
     city : DataTypes.STRING,
-    availableRooms:DataTypes.INTEGER
+    availableRooms:DataTypes.INTEGER,
+    roomImages:DataTypes.STRING
   }, {});
   hotels.associate = function(models) {
     // associations can be defined here

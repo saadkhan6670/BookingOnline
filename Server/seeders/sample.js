@@ -4,10 +4,12 @@ let  array = [{
     "hotelName": "Sheraton Karachi Creek Hotel & Towers",
     "city":"Karachi",
     "rate": 2229.61,
-    "address": "Karachi",
+    "address": "Al Fahidi Street, Opposite Dubai Museum and Historic Bastakiya, Karachi",
     "rating":4,
     "reviews" :3565,
-    "availableRooms":7
+    "availableRooms":7,
+    "roomImages":"../assets/images/room-1.jpg"
+
 },{
   "hotelName": "Raffles Karachi",
   "city":"Karachi",
@@ -15,7 +17,9 @@ let  array = [{
   "address": "Sheikh Rashid Road, Wafi Mall, Karachi",
   "rating":5,
   "reviews" :4143,
-  "availableRooms":4
+  "availableRooms":4,
+  "roomImages":"../assets/images/room-2.jpg"
+
 },{
 "hotelName": "Karachi Courtyard Hotel & Spa",
 "city":"Karachi",
@@ -23,7 +27,8 @@ let  array = [{
 "address": "Al Fahidi Street, Opposite Dubai Museum and Historic Bastakiya, Karachi",
 "rating":3,
 "reviews" :3565,
-"availableRooms":6
+"availableRooms":6,
+"roomImages":"../assets/images/room-3.jpg"
 },{
 "hotelName": "Radisson Blu Hotel, Karachi",
 "city":"Karachi",
@@ -31,7 +36,8 @@ let  array = [{
 "address": "Baniyas Road, Karachi",
 "rating":4,
 "reviews" :4143,
-"availableRooms":2
+"availableRooms":2,
+"roomImages":"../assets/images/room-4.jpg"
 } ,{
   "hotelName": "Karachi Hotel",
   "city":"karachi",
@@ -39,7 +45,8 @@ let  array = [{
   "address": "Sheikh Rashid Road, Wafi Mall,Karachi",
   "rating":5,
   "reviews" :4143,
-  "availableRooms":6
+  "availableRooms":6,
+  "roomImages":"../assets/images/room-5.jpg"
 },{
   "hotelName": "Karachi Motels & Co",
   "city":"karachi",
@@ -47,17 +54,19 @@ let  array = [{
   "address": "Sheikh Rashid Road,Karachi",
   "rating":5,
   "reviews" :4143,
-  "availableRooms": 4
+  "availableRooms": 4,
+  "roomImages":"../assets/images/room-6.jpg"
 },
 // Lahore Data
 {
 "hotelName": "Sheraton Lahore Creek Hotel & Towers",
 "city":"Lahore",
 "rate": 2229.61,
-"address": "Lahore",
+"address": "Al Fahidi Street, Opposite Dubai Museum and Historic Bastakiya, Lahore",
 "rating":5,
 "reviews" :3565,
-"availableRooms":8
+"availableRooms":8,
+"roomImages":"../assets/images/room-3.jpg"
 },{
 "hotelName": "Raffles Lahore",
 "city":"Lahore",
@@ -65,7 +74,8 @@ let  array = [{
 "address": "Sheikh Rashid Road, Wafi Mall, Lahore",
 "rating":5,
 "reviews" :4143,
-"availableRooms":7
+"availableRooms":7,
+"roomImages":"../assets/images/room-2.jpg"
 },{
 "hotelName": "Lahore Courtyard Hotel & Spa",
 "city":"Lahore",
@@ -73,7 +83,8 @@ let  array = [{
 "address": "Al Fahidi Street, Opposite Lahore Museum and Historic Bastakiya, Lahore",
 "rating":4,
 "reviews" :3565,
-"availableRooms":6
+"availableRooms":6,
+"roomImages":"../assets/images/room-4.jpg"
 },{
 "hotelName": "Radisson Blu Hotel, Lahore",
 "city":"Lahore",
@@ -81,7 +92,8 @@ let  array = [{
 "address": "Baniyas Road, Lahore",
 "rating":4,
 "reviews" :4143,
-"availableRooms":2
+"availableRooms":2,
+"roomImages":"../assets/images/room-5.jpg"
 } ,{
 "hotelName": "Lahore Hotel",
 "city":"Lahore",
@@ -89,15 +101,17 @@ let  array = [{
 "address": "Sheikh Rashid Road, Wafi Mall,Lahore",
 "rating":5,
 "reviews" :4143,
-"availableRooms":6
+"availableRooms":6,
+"roomImages":"../assets/images/room-6.jpg"
 },{
 "hotelName": "Lahore Motels & Co",
-"city":"karachi",
+"city":"Lahore",
 "rate": 5373.58,
 "address": "Sheikh Rashid Road,Lahore",
 "rating":5,
 "reviews" :4143,
-"availableRooms": 4
+"availableRooms": 4,
+"roomImages":"../assets/images/room-1.jpg"
 },
 {
   // Faisalabad Data
@@ -108,7 +122,8 @@ let  array = [{
   "address": "Faisalabad",
   "rating":5,
   "reviews" :3565,
-  "availableRooms":8
+  "availableRooms":8,
+  "roomImages":"../assets/images/room-4.jpg"
   },{
   "hotelName": "Raffles Faisalabad",
   "city":"Faisalabad",
@@ -116,7 +131,8 @@ let  array = [{
   "address": "Sheikh Rashid Road, Wafi Mall, Faisalabad",
   "rating":5,
   "reviews" :4143,
-  "availableRooms":7
+  "availableRooms":7,
+  "roomImages":"../assets/images/room-5.jpg"
   },{
   "hotelName": "Faisalabad Courtyard Hotel & Spa",
   "city":"Faisalabad",
@@ -124,7 +140,8 @@ let  array = [{
   "address": "Al Fahidi Street, Opposite Faisalabad Museum and Historic Bastakiya, Faisalabad",
   "rating":4,
   "reviews" :3565,
-  "availableRooms":6
+  "availableRooms":6,
+  "roomImages":"../assets/images/room-6.jpg"
   },{
   "hotelName": "Radisson Blu Hotel, Faisalabad",
   "city":"Faisalabad",
@@ -132,7 +149,8 @@ let  array = [{
   "address": "Baniyas Road, Faisalabad",
   "rating":4,
   "reviews" :4143,
-  "availableRooms":2
+  "availableRooms":2,
+  "roomImages":"../assets/images/room-1.jpg"
   } ,{
   "hotelName": "Faisalabad Hotel",
   "city":"Faisalabad",
@@ -140,7 +158,8 @@ let  array = [{
   "address": "Sheikh Rashid Road, Wafi Mall,Faisalabad",
   "rating":5,
   "reviews" :4143,
-  "availableRooms":6
+  "availableRooms":6,
+  "roomImages":"../assets/images/room-3.jpg"
   },{
   "hotelName": "Faisalabad Motels & Co",
   "city":"Faisalabad",
@@ -148,7 +167,8 @@ let  array = [{
   "address": "Sheikh Rashid Road,Faisalabad",
   "rating":5,
   "reviews" :4143,
-  "availableRooms": 4
+  "availableRooms": 4,
+  "roomImages":"../assets/images/room-2.jpg"
   },
   {
     // Multan Data
@@ -159,7 +179,8 @@ let  array = [{
     "address": "Multan",
     "rating":5,
     "reviews" :3565,
-    "availableRooms":8
+    "availableRooms":8,
+    "roomImages":"../assets/images/room-3.jpg"
     },{
     "hotelName": "Raffles Multan",
     "city":"Multan",
@@ -167,7 +188,8 @@ let  array = [{
     "address": " Al Riqqa StreetSheikh Rashid Road, Wafi Mall, Multan",
     "rating":5,
     "reviews" :4143,
-    "availableRooms":7
+    "availableRooms":7,
+    "roomImages":"../assets/images/room-5.jpg"
     },{
     "hotelName": "Multan Courtyard Hotel & Spa",
     "city":"Multan",
@@ -175,7 +197,8 @@ let  array = [{
     "address": "Al Fahidi Street, Opposite Multan Museum and Historic Bastakiya, Multan",
     "rating":4,
     "reviews" :3565,
-    "availableRooms":6
+    "availableRooms":6,
+    "roomImages":"../assets/images/room-6.jpg"
     },{
     "hotelName": "Radisson Blu Hotel, Multan",
     "city":"Multan",
@@ -183,7 +206,8 @@ let  array = [{
     "address": "Baniyas Road, Multan",
     "rating":4,
     "reviews" :4143,
-    "availableRooms":2
+    "availableRooms":2,
+    "roomImages":"../assets/images/room-1.jpg"
     } ,{
     "hotelName": "Multan Hotel",
     "city":"Faisalabad",
@@ -191,7 +215,8 @@ let  array = [{
     "address": "Sheikh Rashid Road, Wafi Mall,Multan",
     "rating":5,
     "reviews" :4143,
-    "availableRooms":6
+    "availableRooms":6,
+    "roomImages":"../assets/images/room-4.jpg"  
     },{
     "hotelName": "Multan Motels & Co",
     "city":"Multan",
@@ -199,7 +224,8 @@ let  array = [{
     "address": "Sheikh Rashid Road,Multan",
     "rating":5,
     "reviews" :4143,
-    "availableRooms": 4
+    "availableRooms": 4,
+    "roomImages":"../assets/images/room-2.jpg"
     },
     {
       
@@ -211,7 +237,8 @@ let  array = [{
     "address": " Al Riqqa StreetHyderabad",
     "rating":5,
     "reviews" :3565,
-    "availableRooms":8
+    "availableRooms":8,
+    "roomImages":"../assets/images/room-4.jpg"
     },{
     "hotelName": "Raffles Hyderabad",
     "city":"Hyderabad",
@@ -219,7 +246,8 @@ let  array = [{
     "address": "Sheikh Rashid Road, Wafi Mall, Hyderabad",
     "rating":5,
     "reviews" :4143,
-    "availableRooms":7
+    "availableRooms":7,
+    "roomImages":"../assets/images/room-1.jpg"
     },{
     "hotelName": "Hyderabad Courtyard Hotel & Spa",
     "city":"Hyderabad",
@@ -227,7 +255,8 @@ let  array = [{
     "address": "Al Fahidi Street, Opposite Hyderabad Museum and Historic Bastakiya, Hyderabad",
     "rating":4,
     "reviews" :3565,
-    "availableRooms":6
+    "availableRooms":6,
+    "roomImages":"../assets/images/room-5.jpg"
     },{
     "hotelName": "Radisson Blu Hotel, Hyderabad",
     "city":"Hyderabad",
@@ -235,7 +264,8 @@ let  array = [{
     "address": "Baniyas Road, Hyderabad",
     "rating":4,
     "reviews" :4143,
-    "availableRooms":2
+    "availableRooms":2,
+    "roomImages":"../assets/images/room-2.jpg"
     } ,{
     "hotelName": "Hyderabad Hotel",
     "city":" Faisalabad",
@@ -243,7 +273,8 @@ let  array = [{
     "address": "Sheikh Rashid Road, Wafi Mall,Hyderabad",
     "rating":5,
     "reviews" :4143,
-    "availableRooms":6
+    "availableRooms":6,
+    "roomImages":"../assets/images/room-6.jpg"
     },{
     "hotelName": "Hyderabad Motels & Co",
     "city":"Hyderabad",
@@ -251,7 +282,8 @@ let  array = [{
     "address": "Sheikh Rashid Road,Hyderabad",
     "rating":5,
     "reviews" :4143,
-    "availableRooms": 4
+    "availableRooms": 4,
+    "roomImages":"../assets/images/room-3.jpg"
     },
     {
       
@@ -263,7 +295,8 @@ let  array = [{
     "address": "Al Riqqa Street, Gujranwala",
     "rating":5,
     "reviews" :3565,
-    "availableRooms":8
+    "availableRooms":8,
+    "roomImages":"../assets/images/room-2.jpg"
     },{
     "hotelName": "Raffles Gujranwala",
     "city":"Gujranwala",
@@ -271,7 +304,8 @@ let  array = [{
     "address": "Sheikh Rashid Road, Wafi Mall, Gujranwala",
     "rating":5,
     "reviews" :4143,
-    "availableRooms":7
+    "availableRooms":7,
+    "roomImages":"../assets/images/room-4.jpg"
     },{
     "hotelName": "Gujranwala Courtyard Hotel & Spa",
     "city":"Gujranwala",
@@ -279,7 +313,8 @@ let  array = [{
     "address": "Al Fahidi Street, Opposite Gujranwala Museum and Historic Bastakiya, Gujranwala",
     "rating":4,
     "reviews" :3565,
-    "availableRooms":6
+    "availableRooms":6,
+    "roomImages":"../assets/images/room-6.jpg"
     },
 
   //Peshawar Data
@@ -290,7 +325,8 @@ let  array = [{
     "address": "Baniyas Road, Peshawar",
     "rating":4,
     "reviews" :4143,
-    "availableRooms":2
+    "availableRooms":2,
+    "roomImages":"../assets/images/room-1.jpg"
     } ,{
       "hotelName": "Peshawar Hotel",
       "city":"Peshawar",
@@ -298,7 +334,8 @@ let  array = [{
       "address": "Sheikh Rashid Road, Wafi Mall,Peshawar",
       "rating":5,
       "reviews" :4143,
-      "availableRooms":6
+      "availableRooms":6,
+      "roomImages":"../assets/images/room-4.jpg"
     },{
       "hotelName": "Peshawar Motels & Co",
       "city":"Peshawar",
@@ -306,33 +343,37 @@ let  array = [{
       "address": "Sheikh Rashid Road, Peshawar",
       "rating":5,
       "reviews" :4143,
-      "availableRooms": 4
+      "availableRooms": 4,
+      "roomImages":"../assets/images/room-5.jpg"
     },
      //Quetta Data
   {
-    "hotelName": "Radisson Blu Hotel, Peshawar",
-    "city":"Peshawar",
+    "hotelName": "Radisson Blu Hotel, Quetta",
+    "city":"Quetta",
     "rate": 1993.49,
-    "address": "Baniyas Road, Peshawar",
+    "address": "Baniyas Road, Quetta",
     "rating":4,
     "reviews" :4143,
-    "availableRooms":2
+    "availableRooms":2,
+    "roomImages":"../assets/images/room-3.jpg"
     } ,{
-      "hotelName": "Peshawar Hotel",
-      "city":"Peshawar",
+      "hotelName": "Quetta Hotel",
+      "city":"Quetta",
       "rate": 5373.58,
-      "address": "Sheikh Rashid Road, Wafi Mall,Peshawar",
+      "address": "Sheikh Rashid Road, Wafi Mall,Quetta",
       "rating":5,
       "reviews" :4143,
-      "availableRooms":6
+      "availableRooms":6,
+      "roomImages":"../assets/images/room-4.jpg"
     },{
-      "hotelName": "Peshawar Motels & Co",
-      "city":"Peshawar",
+      "hotelName": "Quetta Motels & Co",
+      "city":"Quetta",
       "rate": 5373.58,
-      "address": "Sheikh Rashid Road, Peshawar",
+      "address": "Sheikh Rashid Road, Quetta",
       "rating":5,
       "reviews" :4143,
-      "availableRooms": 4
+      "availableRooms": 4,
+      "roomImages":"../assets/images/room-1.jpg"
     },
     //Islamabad Data
   {
@@ -342,7 +383,8 @@ let  array = [{
     "address": "Baniyas Road, Islamabad",
     "rating":4,
     "reviews" :4143,
-    "availableRooms":2
+    "availableRooms":2,
+    "roomImages":"../assets/images/room-6.jpg"
     } ,{
       "hotelName": "Islamabad Hotel",
       "city":"Islamabad",
@@ -350,7 +392,8 @@ let  array = [{
       "address": "Sheikh Rashid Road, Wafi Mall,Islamabad",
       "rating":5,
       "reviews" :4143,
-      "availableRooms":6
+      "availableRooms":6,
+      "roomImages":"../assets/images/room-5.jpg"
     },
 
 ]

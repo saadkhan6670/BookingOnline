@@ -30,143 +30,28 @@
 							<div class="col-md-12 col-md-offset-0 heading2 animate-box">
 								<h2>Hotel List</h2>
 							</div>
-							<div class="row">
-								<div class="col-md-12 animate-box">
-									<div class="room-wrap">
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<div class="room-img" style="background-image: url(../assets/images/room-1.jpg);"></div>
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<div class="desc">
-													<h2>Family Room</h2>
-													<p class="price">
-														<span>$45</span>
-														<small>/ night</small>
-													</p>
-													<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
-														day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-													<p>
-														<a href="#" class="btn btn-primary">Book Now!</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div *ngFor="let hotel of hotels" class="row">
 
 								<div class="col-md-12 animate-box">
 									<div class="room-wrap">
 										<div class="row">
 											<div class="col-md-6 col-sm-6">
-												<div class="room-img" style="background-image: url(../assets/images/room-2.jpg);"></div>
+												<div class="room-img" [ngStyle]="{ 'background-image': 'url(' + hotel.roomImages + ')'}"></div>
 											</div>
 											<div class="col-md-6 col-sm-6">
 												<div class="desc">
-													<h2>Luxury Room</h2>
-													<p class="price">
-														<span>$75</span>
-														<small>/ night</small>
-													</p>
-													<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
-														day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-													<p>
-														<a href="#" class="btn btn-primary">Book Now!</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+													<h2 style="margin: 0%">{{hotel.hotelName}}</h2>
 
-								<div class="col-md-12 animate-box">
-									<div class="room-wrap">
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<div class="room-img" style="background-image: url(../assets/images/room-3.jpg);"></div>
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<div class="desc">
-													<h2>Double Room</h2>
+													<rating [(ngModel)]= hotel.rating [max]="5" [readonly]="true" style="font-size: 25px; color: goldenrod;"></rating>
+													
+													<h5>{{hotel.address}}</h5>
+													<p>People Reviews : {{hotel.reviews}}</p>
 													<p class="price">
-														<span>$40</span>
-														<small>/ night</small>
-													</p>
-													<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
-														day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-													<p>
-														<a href="#" class="btn btn-primary">Book Now!</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+														<span>Rs {{hotel.rate}} / night</span>
 
-								<div class="col-md-12 animate-box">
-									<div class="room-wrap">
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<div class="room-img" style="background-image: url(../assets/images/room-4.jpg);"></div>
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<div class="desc">
-													<h2>Suite Room</h2>
-													<p class="price">
-														<span>$25</span>
-														<small>/ night</small>
 													</p>
-													<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
-														day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 													<p>
-														<a href="#" class="btn btn-primary">Book Now!</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 
-								<div class="col-md-12 animate-box">
-									<div class="room-wrap">
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<div class="room-img" style="background-image: url(../assets/images/room-5.jpg);"></div>
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<div class="desc">
-													<h2>Superior Double Room</h2>
-													<p class="price">
-														<span>$50</span>
-														<small>/ night</small>
-													</p>
-													<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
-														day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-													<p>
-														<a href="#" class="btn btn-primary">Book Now!</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-12 animate-box">
-									<div class="room-wrap">
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<div class="room-img" style="background-image: url(../assets/images/room-6.jpg);"></div>
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<div class="desc">
-													<h2>Classic Double Room</h2>
-													<p class="price">
-														<span>$48</span>
-														<small>/ night</small>
-													</p>
-													<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
-														day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-													<p>
 														<a href="#" class="btn btn-primary">Book Now!</a>
 													</p>
 												</div>
@@ -175,6 +60,7 @@
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -185,23 +71,24 @@
 				<div class="sidebar-wrap">
 					<div class="side search-wrap animate-box">
 						<h3 class="sidebar-heading">Find your hotel</h3>
-						<form method="post" class="colorlib-form">
+						<div class="colorlib-form">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label for="date">Check-in:</label>
+										<label for="date">Location:</label>
 										<div class="form-field">
 											<i class="icon icon-calendar2"></i>
-											<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+											<input type="text" id="location" [(ngModel)]="flightLookupObj.location" [typeahead]="states" class="form-control" placeholder="Search Location">
 										</div>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label for="date">Check-out:</label>
+										<label for="date">Date-Picker:</label>
 										<div class="form-field">
-											<i class="icon icon-calendar2"></i>
-											<input type="text" id="date" class="form-control date" placeholder="Check-out date">
+												<input class="form-control" #drp="bsDaterangepicker" 
+										bsDaterangepicker [(ngModel)]="flightLookupObj.bsRangeValue" 
+										[minDate]="minDate">
 										</div>
 									</div>
 								</div>
@@ -209,22 +96,22 @@
 									<div class="form-group">
 										<label for="guests">Guest</label>
 										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#">1</option>
-												<option value="#">2</option>
-												<option value="#">3</option>
-												<option value="#">4</option>
-												<option value="#">5+</option>
-											</select>
-										</div>
+												<i class="dropdown-menu"></i>
+												<select name="people" id="people" [(ngModel)]="flightLookupObj.guest" class="form-control">
+													<option value="1" style="background-color: #333544;" >1</option>
+													<option value="2" style="background-color: #333544;">2</option>
+													<option value="3" style="background-color: #333544;">3</option>
+													<option value="4" style="background-color: #333544;">4</option>
+													<option value="5" style="background-color: #333544;">5+</option>
+												</select>
+											</div>
 									</div>
 								</div>
 								<div class="col-md-12">
-									<input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
+									<input type="submit" name="submit" (click)="submitLookup()" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
 								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 					<div class="side animate-box">
 						<div class="row">
@@ -276,8 +163,8 @@
 										<label class="form-check-label" for="exampleCheck1">
 											<p class="rate">
 												<span>
-												<rating [(ngModel)]="rate5" [max]="5" [readonly]="true" style="font-size: 31px; color: goldenrod;"></rating>
-												
+													<rating [(ngModel)]="rate5" [max]="5" [readonly]="true" style="font-size: 31px; color: goldenrod;"></rating>
+
 												</span>
 											</p>
 										</label>
@@ -320,8 +207,8 @@
 										<label class="form-check-label" for="exampleCheck1">
 											<p class="rate">
 												<span>
-												<rating [(ngModel)]="rate1" [max]="1" [readonly]="true" style="font-size: 31px; color: goldenrod;"></rating>
-													
+													<rating [(ngModel)]="rate1" [max]="1" [readonly]="true" style="font-size: 31px; color: goldenrod;"></rating>
+
 												</span>
 											</p>
 										</label>
@@ -330,7 +217,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>

@@ -3,7 +3,6 @@ import { FlighLookup } from '../shared/models/flightLookup';
 import { LookupService } from '../shared/services/lookup.service';
 import { Hotel } from '../shared/models/hotel';
 import { Router } from '@angular/router';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private _lookupService: LookupService, private router: Router) {
 
-    this.flightLookupObj.bsRangeValue = [this.bsValueto, this.bsValuefrom];
+    this.flightLookupObj.bsRangeValue = [this.bsValuefrom, this.bsValueto];
   }
 
   states: string[] = [

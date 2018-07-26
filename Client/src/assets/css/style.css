@@ -472,7 +472,7 @@ h1, h2, h3, h4, h5, h6, figure {
   #colorlib-reservation .tab-content {
     background: #2C2E3E;
     padding: 25px 189px; 
-    opacity: 0.9;
+    /* opacity: 0.9; */
   }
   input::-webkit-input-placeholder {
     font-size: 14px;
