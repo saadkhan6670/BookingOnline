@@ -23,6 +23,15 @@ module.exports = {
       reviews: {
         type: Sequelize.INTEGER
       },
+      city: {
+        type: Sequelize.STRING
+      },
+      availableRooms: {
+        type: Sequelize.INTEGER
+      },
+      roomImages: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -32,7 +32,6 @@
     "moment": "^2.22.2",
     "ng2-validation": "^4.2.0",
     "ngx-bootstrap": "^3.0.1",
-    "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

@@ -28,6 +28,7 @@ import { HotelFormComponent } from './admin/hotel-form/hotel-form.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './admin/login/login.component';
 
+import { RatingModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +58,9 @@ import { LoginComponent } from './admin/login/login.component';
     InputsModule.forRoot(),
     ReactiveFormsModule,
     // DropdownModule.forRoot(),
-    MatButtonModule
+    MatButtonModule,
     // CustomFormsModule
+    RatingModule.forRoot(),
 
   ],
   schemas: [ NO_ERRORS_SCHEMA],
