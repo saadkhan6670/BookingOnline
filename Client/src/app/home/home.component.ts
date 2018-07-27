@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
 
     // console.log("from hre"  moment(this.maxDate).format('L'));
 
-    this.router.navigate(['/hotel-list'], {
+  this.router.navigate(['/hotel-list'], {
       queryParams: {
         location: this.flightLookupObj.location,
         from: this.flightLookupObj.bsRangeValue[0],

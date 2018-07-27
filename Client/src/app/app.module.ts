@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule,BsDatepickerModule,TypeaheadModule, BsDropdownModule  } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
-
+import { ModalModule, WavesModule, InputsModule, DropdownModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +12,16 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+
+import { AdminHotelsComponent } from './admin/admin-hotels/admin-hotels.component';
+import { HotelFormComponent } from './admin/hotel-form/hotel-form.component';
+
+
+import { MatButtonModule } from '@angular/material/button';
+// For MDB Angular Free
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './admin/login/login.component';
+
 import { RatingModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
@@ -21,7 +31,10 @@ import { RatingModule } from 'ngx-bootstrap';
     NavigationComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    AdminHotelsComponent,
+    HotelFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +45,15 @@ import { RatingModule } from 'ngx-bootstrap';
     FormsModule,TypeaheadModule.forRoot(),
     BsDropdownModule.forRoot(),
     RatingModule.forRoot(),
+    ModalModule.forRoot(),
+    WavesModule.forRoot(),
+    InputsModule.forRoot(),
+    ReactiveFormsModule,
+    // DropdownModule.forRoot(),
+    MatButtonModule,
 
   ],
+  schemas: [ NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

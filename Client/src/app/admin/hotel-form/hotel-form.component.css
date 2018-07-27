@@ -1,0 +1,17 @@
+
+.hotel-form-page{
+
+    padding: 100px 50px 50px 50px;
+    font-family: sans-serif;
+    color: black;
+}
+option {
+
+    background-color: grey;
+    color: white;
+}
+.form-control {
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: gainsboro;
+}
