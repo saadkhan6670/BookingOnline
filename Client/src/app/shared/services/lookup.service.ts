@@ -18,4 +18,5 @@ export class LookupService {
   // dikhao server
     return this._http.post(`${this.global.getServerurl()}get-specific-hotels`,lookupObj);
   }
+
 }

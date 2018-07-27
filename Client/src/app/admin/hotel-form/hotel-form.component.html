@@ -1,15 +1,14 @@
 <div class="hotel-form-page">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" style="margin: 50px 0px 0px 0px;">
         <form #f="ngForm" (ngSubmit)="save(f.value)">
             <!-- Hotel name-->
             <div class="form-group">
               <label for="title">Hotel Name</label>
-              <input #title="ngModel" ngModel name="title" id="title" type="text" class="form-control" required>
-              <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+              <input #hotelName="ngModel" ngModel name="hotelName" id="title" type="text" class="form-control" required>
+              <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
                   Title is required
               </div>
-              
             </div>
             <!-- hotel country -->
                 <div class="form-group">
@@ -19,22 +18,11 @@
                       country is required
                     </div>
             </div>
-            <!-- hotel cost per night-->
-              <div class="form-group">
-                <label for="title">Cost</label>
-                <div class="input-group">
-                <span class="input-group-addon">$</span>
-                <input #cost ="ngModel" ngModel name="cost" id="cost" type="number" class="form-control" required>
-                <div class="div alert alert-danger" *ngIf="cost.touched && cost.invalid">
-                  cost is required
-                </div>
-              </div>
-            </div>
-            <!-- hotel category-->
+            <!-- hotel category -->
             <div class="form-group">
                   <label for="Category">Category</label>
-                  <select #category="ngModel" ngModel name="category" id="category" class="form-control" required>
-                    <option  *ngFor="let options of categories" value="option" style="color: black;">
+                  <select style="line-height: 2em;" #category="ngModel" ngModel name="category" id="category" class="form-control" required>
+                    <option style="line-height: 2em;"  *ngFor="let options of categories" value="option" style="color: black;">
                       {{ options }}
                     </option>
                   </select>
@@ -50,7 +38,19 @@
                     Address is required
                   </div>
                   </div>
-          <!-- hotel image to be shown -->
+            <!-- hotel cost per night-->
+            <div class="form-group">
+                <label for="title">Cost</label>
+                <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input #cost ="ngModel" ngModel name="cost" id="cost" type="number" class="form-control" required>
+                <div class="div alert alert-danger" *ngIf="cost.touched && cost.invalid">
+                  cost is required
+                </div>
+              </div>
+            </div>
+
+                  <!-- hotel image to be shown -->
               <div class="form-group">
                 <label for="imageurl">Image Url</label>
                 <input #imageUrl="ngModel" ngModel name="imageUrl" id="imageUrl" type="text" class="form-control" required>
@@ -62,22 +62,23 @@
               <button class="btn btn-primary">Add Hotel</button>
           </form>
         </div>
-    <div class="col-md-5" style="margin-left:100px;">
+    <!-- hotel card area-->
+        <div class="col-md-5" style="margin: 150px 0px 0 100px;">
 
         <div class="card" style="width: 34rem;">
             <img class="card-img-top" [src]="imageUrl.value">
             <div class="card-body">
               <h5 class="card-title">{{ title.value }} </h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group">
               <li class="list-group-item">{{country.value}}</li>
               <li class="list-group-item">{{address.value}}</li>
               <li class="list-group-item">{{cost.value | currency:'USD':true}}</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+
+              <!-- <a href="#" class="card-link"></a>
+              <a href="#" class="card-link">Another link</a> -->
             </div>
           </div>
     </div>

@@ -22,10 +22,11 @@ import { ModalFormComponent } from './modal-form/modal-form.component';
 //admin panel components
 import { AdminHotelsComponent } from './admin/admin-hotels/admin-hotels.component';
 import { HotelFormComponent } from './admin/hotel-form/hotel-form.component';
-import { MainAdminComponent } from './admin/main-admin/main-admin.component'; 
+
 
 // For MDB Angular Free
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './admin/login/login.component';
 
 @NgModule({
   declarations: [
@@ -39,9 +40,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     AdminHotelsComponent,
     HotelFormComponent,
-    MainAdminComponent
+    LoginComponent
   ],
-
 
   imports: [
     // MatButtonModule,
