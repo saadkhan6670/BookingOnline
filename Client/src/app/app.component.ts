@@ -8,4 +8,6 @@ import { CarouselModule } from 'ngx-bootstrap';
 })
 export class AppComponent {
   title = 'app';
+
+  
 }

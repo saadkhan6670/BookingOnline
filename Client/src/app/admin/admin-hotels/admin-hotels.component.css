@@ -1,0 +1,17 @@
+.admin-hotels-list {
+    margin: 100px 100px 100px 100px;
+    /* padding: 200px 200px 200px; */
+}
+
+th,td {
+    padding: 30px 10px 20px 10px;
+}
+table {
+
+    margin-top: 100px;
+    
+}
+.jumbotron {
+
+    margin: auto;
+}

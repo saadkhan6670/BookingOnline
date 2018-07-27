@@ -1,0 +1,12 @@
+<div>
+<span dropdown (onShown)="onShown()" (onHidden)="onHidden()" (isOpenChange)="isOpenChange()">
+    <a href id="basic-link" dropdownToggle (click)="false"
+       aria-controls="">Admin</a>
+    <ul id="basic-link-dropdown" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="basic-link">
+      <li placement="down" *ngFor="let choice of items let rout of routs">
+        <a routerLink="/admin/hotels" style="background-color: #333544">{{choice}}</a>
+      </li>
+    </ul>
+  </span>
+</div>
