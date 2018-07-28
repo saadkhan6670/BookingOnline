@@ -17,11 +17,10 @@ const routes: Routes = [
   { path: 'hotel-list', component: HotelsListComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'bh-admin', component: LoginComponent },
+  { path: 'admin-dashboard', component: DashboardComponent },
   { path: 'admin/admin-hotels', component: AdminHotelsComponent},
   { path: 'admin/hotel-form/new', component: HotelFormComponent },
-  { path: 'bh-admin', component: LoginComponent },
-  { path: 'admin-Dashboard', component: DashboardComponent }
-
 ];
 
 @NgModule({
