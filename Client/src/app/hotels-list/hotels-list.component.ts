@@ -3,9 +3,6 @@ import { Hotel } from '../shared/models/hotel';
 import { FlighLookup } from '../shared/models/flightLookup';
 import { LookupService } from '../shared/services/lookup.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-
-
-
 @Component({
   selector: 'app-hotels-list',
   templateUrl: './hotels-list.component.html',

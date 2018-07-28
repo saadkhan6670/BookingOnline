@@ -23,6 +23,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './admin/login/login.component';
 
 import { RatingModule } from 'ngx-bootstrap';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { RatingModule } from 'ngx-bootstrap';
     FooterComponent,
     AdminHotelsComponent,
     HotelFormComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

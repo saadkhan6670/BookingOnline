@@ -14,8 +14,19 @@ export class LookupService {
   constructor(private _http:HttpClient) { }
 
   flightLookup(lookupObj){
-
-  // dikhao server
     return this._http.post(`${this.global.getServerurl()}get-specific-hotels`,lookupObj);
+  }
+
+  credtsCheck(Creds) {
+   let credsname = "admin";
+   let credsPass = "admin";
+
+   if(Creds.username === credsname && Creds.password === credsPass){
+     return true;
+   }
+   else {
+      false;
+   }
+   
   }
 }

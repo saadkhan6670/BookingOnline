@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
   submitLookup() {
 
     // console.log("from hre"  moment(this.maxDate).format('L'));
-
   this.router.navigate(['/hotel-list'], {
       queryParams: {
         location: this.flightLookupObj.location,

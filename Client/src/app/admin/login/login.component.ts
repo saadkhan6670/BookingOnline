@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LookupService } from '../../shared/services/lookup.service';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  users= [] ;
-
-  username :string;
-  password : string;
+  alertUI = true ;
+ 
+  
+  constructor(private router: Router , private _lookupService: LookupService) { }
 
   save(userlog) {
-    this.username = this.users['username'];
-    this.password = this.users['password'];
+    if( this._lookupService.credtsCheck(userlog) === true ){
+      this.alertUI = true;
 
+    }
+    else {
+        
+      this.alertUI = false;
+      
+      
+    }
+    
+   
   }
-  constructor() { }
 
   ngOnInit() {
   }

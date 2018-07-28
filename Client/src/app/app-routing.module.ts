@@ -8,6 +8,7 @@ import { ContactComponent }      from './contact/contact.component';
 import { AdminHotelsComponent } from './admin/admin-hotels/admin-hotels.component';
 import { HotelFormComponent } from './admin/hotel-form/hotel-form.component';
 import {LoginComponent} from './admin/login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
@@ -18,8 +19,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'admin/admin-hotels', component: AdminHotelsComponent},
   { path: 'admin/hotel-form/new', component: HotelFormComponent },
-  { path: 'bh-admin', component: LoginComponent }
-
+  { path: 'bh-admin', component: LoginComponent },
+  { path: 'admin-Dashboard', component: DashboardComponent }
 
 ];
 
