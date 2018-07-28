@@ -3,7 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule,BsDatepickerModule,TypeaheadModule, BsDropdownModule  } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { ModalModule, WavesModule, InputsModule, DropdownModule } from 'angular-bootstrap-md';
+// import { ModalModule, WavesModule, InputsModule, DropdownModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -45,9 +45,9 @@ import { RatingModule } from 'ngx-bootstrap';
     FormsModule,TypeaheadModule.forRoot(),
     BsDropdownModule.forRoot(),
     RatingModule.forRoot(),
-    ModalModule.forRoot(),
-    WavesModule.forRoot(),
-    InputsModule.forRoot(),
+    // ModalModule.forRoot(),
+    // WavesModule.forRoot(),
+    // InputsModule.forRoot(),
     ReactiveFormsModule,
     // DropdownModule.forRoot(),
     MatButtonModule,
