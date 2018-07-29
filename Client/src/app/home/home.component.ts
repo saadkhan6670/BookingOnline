@@ -3,6 +3,7 @@ import { FlighLookup } from '../shared/models/flightLookup';
 import { LookupService } from '../shared/services/lookup.service';
 import { Hotel } from '../shared/models/hotel';
 import { Router } from '@angular/router';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-home',
@@ -43,8 +44,6 @@ export class HomeComponent implements OnInit {
   }
 
   submitLookup() {
-
-    // console.log("from hre"  moment(this.maxDate).format('L'));
   this.router.navigate(['/hotel-list'], {
       queryParams: {
         location: this.flightLookupObj.location,

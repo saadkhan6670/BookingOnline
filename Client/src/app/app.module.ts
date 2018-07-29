@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { CarouselModule,BsDatepickerModule,TypeaheadModule, BsDropdownModule  } from 'ngx-bootstrap';
+import { CarouselModule,BsDatepickerModule,TypeaheadModule, BsDropdownModule,ModalModule  } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
 // import { ModalModule, WavesModule, InputsModule, DropdownModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
@@ -51,6 +51,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     // ModalModule.forRoot(),
     // WavesModule.forRoot(),
     // InputsModule.forRoot(),
+    ModalModule.forRoot(),
     ReactiveFormsModule,
     // DropdownModule.forRoot(),
     MatButtonModule,

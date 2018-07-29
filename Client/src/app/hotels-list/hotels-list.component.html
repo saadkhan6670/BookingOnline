@@ -3,20 +3,68 @@
 		<ul class="slides">
 			<li style="background-image: url(../../assets/images/cover-img-3.jpg);">
 				<div class="overlay"></div>
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
-							<div class="slider-text-inner text-center">
-								<h2>by colorlib.com</h2>
-								<h1>About us</h1>
-							</div>
-						</div>
-					</div>
-				</div>
+		
 			</li>
 		</ul>
 	</div>
 </aside>
+
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">You are about to book this hotel</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+		
+    <div class="row">
+		<div class="wrap-division">
+			<div class="col-md-12 col-sm-12 animate-box">
+				<div class="hotel-entry">
+					<a href="hotel-room.html" class="hotel-img" [ngStyle]="{ 'background-image': 'url(' + bookedHotel.roomImages + ')'}">
+						<p class="price">Rs {{bookedHotel.rate}} / night</p>
+					</a>
+					<div class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> {{bookedHotel.reviews}} Reviews</p>
+						<h3 style="margin: 0%"><a>{{bookedHotel.hotelName}}</a></h3>
+						<span class="place">{{this.flightLookupObj.location}}</span>
+						<rating [(ngModel)]= bookedHotel.rating [max]="5" [readonly]="true" style="font-size: 25px; color: goldenrod;"></rating>
+						<p>{{bookedHotel.address}}</p>
+						<h3><a>User details</a></h3>
+						Write your NIC and Name to confirm this booking
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="date">Name:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input [(ngModel)]="BookerName" type="text" id="Name"  class="form-control" placeholder="Your name">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="date">Nic:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input [(ngModel)]="BookerNic" type="text" id="Nic"  class="form-control" placeholder="Your Nic without dashes ">
+								</div>
+							</div>
+						</div>
+						<p>
+							<a (click)="ConfirmBooking(bookedHotel.id)" class="btn btn-primary">Confirm Booking</a>
+					
+						</p>
+				</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+  </div>
+
+</ng-template>
 
 
 
@@ -30,7 +78,7 @@
 							<div class="col-md-12 col-md-offset-0 heading2 animate-box">
 								<h2>Hotel List</h2>
 							</div>
-							<div *ngFor="let hotel of hotels" class="row">
+							<div *ngFor="let hotel of hotels ; let i = index" [attr.data-index]="i" class="row">
 
 								<div class="col-md-12 animate-box">
 									<div class="room-wrap">
@@ -52,7 +100,7 @@
 													</p>
 													<p>
 
-														<a href="#" class="btn btn-primary">Book Now!</a>
+														<a (click)="openModal(template)" (click)="BookHotel(i)" class="btn btn-primary">Book Now!</a>
 													</p>
 												</div>
 											</div>
@@ -70,7 +118,7 @@
 			<div class="col-md-3">
 				<div class="sidebar-wrap">
 					<div class="side search-wrap animate-box">
-						<h3 class="sidebar-heading">Find your hotel</h3>
+						<h3 class="sidebar-heading">Filter your hotels</h3>
 						<div class="colorlib-form">
 							<div class="row">
 								<div class="col-md-12">
@@ -113,6 +161,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="side animate-box">
 						<div class="row">
 							<div class="col-md-12">

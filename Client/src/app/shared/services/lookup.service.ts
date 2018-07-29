@@ -26,4 +26,8 @@ export class LookupService {
       false;
    }
   }
+
+  HotelBooked(nic_id , hotel_id , book_from , book_to){
+    return this._http.post(`${this.global.getServerurl()}hotel-booking`,{nic_id , hotel_id , book_from , book_to});
+  }
 }

@@ -23,10 +23,10 @@ module.exports = {
         allowNull: false
       },
       book_from: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       book_to: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

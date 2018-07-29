@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   var bookHotels = sequelize.define('bookHotels', {
     nic_id: DataTypes.INTEGER,
     hotel_id: DataTypes.INTEGER,
-    book_from: DataTypes.DATE,
-    book_to: DataTypes.DATE
+    book_from: DataTypes.STRING,
+    book_to: DataTypes.STRING
   }) 
   bookHotels.associate = function (models) {
     bookHotels.belongsTo(sequelize.models.NICs, {foreignKey: 'nic_id'});
