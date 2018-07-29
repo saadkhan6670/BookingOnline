@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LookupService } from '../../shared/services/lookup.service';
+import { NavbarService } from '../../shared/services/Navbar.service';
 
 @Component({
   selector: 'app-login',
@@ -10,26 +11,20 @@ import { LookupService } from '../../shared/services/lookup.service';
 export class LoginComponent implements OnInit {
 
   alertUI = true ;
- 
-  
-  constructor(private router: Router , private _lookupService: LookupService) { }
+  constructor( public nav: NavbarService, private router: Router , private _lookupService: LookupService) { }
 
   save(userlog) {
     if( this._lookupService.credtsCheck(userlog) === true ){
       this.alertUI = true;
-
     }
     else {
-        
       this.alertUI = false;
-      
-      
     }
     
-   
   }
-
   ngOnInit() {
+    this.nav.visible = false;
+    this.nav.hide();
   }
 
 }

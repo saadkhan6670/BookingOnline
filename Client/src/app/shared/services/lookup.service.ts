@@ -9,8 +9,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class LookupService {
   global = new Global();
 
-  
-
   constructor(private _http:HttpClient) { }
 
   flightLookup(lookupObj){
@@ -27,6 +25,5 @@ export class LookupService {
    else {
       false;
    }
-   
   }
 }

@@ -1,12 +1,13 @@
 <div class="login-page">
-    <div *ngIf="!alertUI" class="alert alert-danger">
+<app-navigation></app-navigation>
+  <div *ngIf="!alertUI" class="alert alert-danger">
         <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
       </div>
   <div class="form">
     Booking Hotel Login
     <form #f="ngForm" (ngSubmit)="save(f.value)">
       <div class="login-form">
-        <input #username ="ngModel" ngModel name="username"  type="text" placeholder="username" />
+        <input #user ="ngModel" ngModel name="user"  type="text" placeholder="username" />
         <input #password ="ngModel" ngModel name="password" type="password" placeholder="password" />
         <button>login</button>
       </div>
