@@ -49,7 +49,7 @@
 							</div>
 						</div>
 						<p>
-							<a (click)="ConfirmBooking(bookedHotel.id)" class="btn btn-primary">Confirm Booking</a>
+							<a (click)="ConfirmBooking(bookedHotel.id)" (click)="modalRef.hide()" class="btn btn-primary">Confirm Booking</a>
 				
 						</p>
 				</div>
