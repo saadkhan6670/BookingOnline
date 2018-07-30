@@ -35,4 +35,7 @@ export class LookupService {
   HotelBooked(nic_id , hotel_id , book_from , book_to){
     return this._http.post(`${this.global.getServerurl()}hotel-booking`,{nic_id , hotel_id , book_from , book_to});
   }
+  GetBooking(){
+    return this._http.get(`${this.global.getServerurl()}get-booking`);
+  }
 }

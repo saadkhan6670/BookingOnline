@@ -1,5 +1,75 @@
-.admin-bookings {
-    margin: 20px 100px 100px 100px;    /* padding: 200px 200px 200px; */
+/* .dashboard-body {
+
+    width: 100%;
+
+} */
+
+.navbar {
+    background: rgb(52,58,64);
+    margin-bottom: 0px;
+}
+.sidenav-container {
+    display: flex;
+    position: absolute;
+  }
+.example-sidenav {
+    width: 400px;
+    padding: 20px;
+    height: 200%;
+    padding-top: 50px;
+    border: 1px solid #555;
+}
+a {
+    letter-spacing: 3;
+    text-decoration: none;
+    color : whitesmoke;
+}
+.side-menu {
+    padding: 5px 0px 15px 0px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    color : whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.sidenav-values {
+    position: relative;
+}
+.side-menu:hover {
+
+    background-color: #555;
+    border-radius: 5px;
+}
+th, td {
+    /* width: 50px; */
+    /* max-width: 50px; */
+}
+
+/*  Add Hotel form style      */
+
+.hotel-form-page{
+
+    padding: 100px 5px 50px 50px;
+    font-family: sans-serif;
+    color: black;
+}
+option {
+
+    background-color: grey;
+    color: white;
+}
+.form-control {
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: gainsboro;
+}
+
+
+ /* Hotels list styles */
+ .admin-hotels-list {
+    margin: 150px 10px 100px 10px;
+    /* padding: 200px 200px 200px; */
 }
 
 th,td {
@@ -7,10 +77,9 @@ th,td {
 }
 table {
 
-    margin-top: 100px;
+    margin-top: 50px;
     
 }
-.jumbotron {
-
+.jumbotron-fluid {
     margin: auto;
 }

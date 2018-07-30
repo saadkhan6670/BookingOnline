@@ -1,55 +1,79 @@
-<div class="admin-bookings">
-
-<div class="backbutton">
-  <button class="btn btn-primary" routerLink="/admin-dashboard">Back</button>
-
-  </div>
-
-  <div class="jumbotron jumbotron-fluid" style="width: 700px; display:flex; text-align: center; background-color: #333544;">
-          <div class="container">
-            <h2 class="display-6" style=" color:ghostwhite;">Bookings</h2>
-          </div>
+  <div class="dashboard-body">
+        <div>
+          <nav class="navbar navbar-dark bg-dark" style= " border-radius: 0px; ;padding: 7px 0px 4px 0px; font-size: 18px; color:whitesmoke;">
+              <span class="navbar-text" style="margin-left: 50px;">
+                <a routerLink="/admin-dashboard">
+              Dashboard
+              </a>    
+            </span>
+            <div ></div>
+            <span style="margin: 15px 30px 15px 0; float: right; text-align:right">
+                <a routerLink="/bh-admin">Logout</a>
+            </span>
+            <div class="avatar">
+    
+              </div>
+      
+          </nav>  
         </div>
-        <p style="text-align: center; margin-top: 30px;">
-              </p>
-  <table class="table">
-      <thead>
-      <tr>
-          <th style="font-size: 14px;" scope="col">Book_ID</th>
-          <th scope="col">Hotel_ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">CNIC</th>
-          <th scope="col">Cost</th>
-          <th scope="col">bookFrom</th>
-          <th scope="col">bookTo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <th scope="row">1</th>
-          <td>hotelID</td>
-          <td>personName</td>
-          <td>CNIC</td>
-          <td>cost</td>
-          <td>Date</td>
-          <td>Date</td>
-          <td>
-              <a routerLink=''>Edit</a>
-          </td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>hotelID</td>
-        <td>personName</td>
-        <td>CNIC</td>
-        <td>cost</td>
-        <td>Date</td>
-        <td>Date</td>
-        <td>
-            <a routerLink=''>Edit</a>
-        </td>
-    </tr>
-
-  </tbody>
-  </table>
-  </div>
+        <div>
+          <div style="width: 100%;">
+        <md-sidenav-container class="sidenav-container" style="width: 100%; height: 200%;">
+          <md-sidenav opened #sidenav class="example-sidenav" style=" width: 13%; background:rgb(52,58,64);">
+            <div class="sidenav-values">
+            <div class="side-menu"><a routerLink="/admin/admin-dashboard">Hotel List</a></div>
+            <div class="side-menu"><a routerLink="/admin/bookings">Bookings</a></div>
+    
+            <div class="side-menu"><a routerLink="/admin/hotel-form/new">Add Hotel</a></div>
+            <!-- <div class="side-menu"><a routerLink="/admin/hotel-form/new">Edit Hotel</a></div>    --k done>
+              
+            <!-- <div class="side-menu"><a routerLink="/admin/bookings">Delete Hotel</a></div>    -->
+            <div class="col-xs-2">
+                <div id="colorlib-logo">
+                  <img src="../../assets/images/logo.png" alt="" width= "208px" height="auto">
+                </div>
+              </div>
+          </div> 
+          </md-sidenav>
+        
+          <div class="example-sidenav-content" style=" width: 100%;">
+              
+              <div class="jumbotron" style="text-align: center;">
+                  <h1 class="display-4"> SAN Hotels & Resorts</h1>
+                  <p class="lead">Admin Dashboard</p>
+                </div>
+                <h2 style="    text-align: center;">List of Bookings</h2>
+    
+                <table class="table">
+                        <thead  class="thead-dark">
+                          <tr >
+                          <th  scope="col">id</th>
+                          <th scope="col">Booker Name and Nic</th>
+                          <th scope="col">Hotel Booked</th>
+                          <th scope="col">Book From  </th>
+                          <th scope="col"> Book To</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let book of Bookings ; let i = index" [attr.data-index]="i"  >
+                          <th scope="row">{{i + 1}}</th>
+                          <td>{{book.NIC.name}} - {{book.NIC.nicNo}}</td>
+                          <td>{{book.hotel.hotelName}}</td>
+                          <td> {{book.book_from}}</td>
+                          <td> {{book.book_to}}</td>
+          
+                          <td> <a  style="cursor: pointer;color : black"> Edit  </a> | <a  style="cursor: pointer;color : black"> Delete  </a></td>
+                      
+                        </tr>
+                        </tbody>
+                        </table>
+        <!-- Hotels List Code -->
+      
+            </div>  
+        
+                <!-- </div> -->
+          </md-sidenav-container>
+        </div>
+        </div>
+        
+        </div>

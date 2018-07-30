@@ -30,7 +30,7 @@
         <!-- <div class="side-menu"><a routerLink="/admin/bookings">Delete Hotel</a></div>    -->
         <div class="col-xs-2">
             <div id="colorlib-logo">
-              <img src="../../assets/images/logo.png" alt="" width= "208px" height="auto">
+              <img src="../../assets/images/logo.png" alt="" >
             </div>
           </div>
       </div> 
@@ -38,15 +38,15 @@
     
       <div class="example-sidenav-content" style=" width: 100%;">
           
-          <div class="jumbotron" style="text-align: center;">
-              <h1 class="display-4"> SAN Hotels & Resorts</h1>
+          <div style="text-align: center;">
+              <h2> SAN Hotels & Resorts</h2>
               <p class="lead">Admin Dashboard</p>
             </div>
-            <h2 style="    text-align: center;">List of hotels</h2>
+            <h2 style="text-align: center;">List of hotels</h2>
 
             <table class="table">
               <thead  class="thead-dark">
-                <tr style="text-align: center">
+                <tr>
                 <th  scope="col">id</th>
                 <th scope="col">Hotel Name</th>
                 <th scope="col">Address</th>
@@ -55,7 +55,7 @@
                 </tr>
               </thead>
               <tbody>
-              <tr *ngFor="let hotel of hotels ; let i = index" [attr.data-index]="i"  style="text-align: center" >
+              <tr *ngFor="let hotel of hotels ; let i = index" [attr.data-index]="i" >
                 <th scope="row">{{i + 1}}</th>
                 <td>{{hotel.hotelName}}</td>
                 <td>{{hotel.address}}</td>
