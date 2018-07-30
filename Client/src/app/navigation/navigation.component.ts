@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarService } from '../shared/services/navbar.service';
+
 
 @Component({
-  selector: 'app-navigation',
+  selector: 'navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
 
-  constructor( public nav: NavbarService) {
+  constructor() {
 
    }
 
   ngOnInit() {
 
-    this.nav.show();
+
   }
 
 }

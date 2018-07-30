@@ -25,6 +25,11 @@ export class HomeComponent implements OnInit {
   constructor(private _lookupService: LookupService, private router: Router) {
 
     this.flightLookupObj.bsRangeValue = [this.bsValuefrom, this.bsValueto];
+
+    this._lookupService.GetPopularHotels().subscribe((res: Hotel[]) => {
+      this.hotels = res;
+      console.log(this.hotels)
+    })
   }
 
   states: string[] = [

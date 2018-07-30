@@ -9,6 +9,8 @@ exports.GetHotels = (req, res) => {
         res.json(hotels);
     });
 };
+
+
 exports.SpecificHotels = (req, res) => {
 
     models.hotels.findAll({
@@ -21,11 +23,22 @@ exports.SpecificHotels = (req, res) => {
 
 };
 
+exports.GetPopularHotels = (req, res) => {
+
+    models.hotels.findAll({
+        where: {
+            rating: 5
+        }
+    }).then(function (hotels) {
+        res.json(hotels);
+    });
+
+};
+
 // Booking Apis
 exports.HotelBooking = (req, res) => {
     let book_from =  moment(req.body.book_from).format('L');
     let book_to =  moment(req.body.book_to).format('L');
-
 
     models.NICs.findOne({
         where: {

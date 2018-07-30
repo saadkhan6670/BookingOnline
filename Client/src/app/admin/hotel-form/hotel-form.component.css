@@ -1,10 +1,18 @@
 
+
 .hotel-form-page{
 
-    padding: 100px 50px 50px 50px;
+    margin: 20px 100px 100px 100px;
+    /* padding: 100px 50px 50px 50px; */
     font-family: sans-serif;
     color: black;
 }
+
+.jumbotron {
+
+    margin: auto;
+}
+
 option {
 
     background-color: grey;
@@ -14,4 +22,9 @@ option {
     font-size: 18px;
     border-radius: 6px;
     background-color: gainsboro;
+}
+
+.form-group {
+
+    margin-bottom: 5px;
 }

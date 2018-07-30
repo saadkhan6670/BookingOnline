@@ -1,12 +1,23 @@
 <div class="hotel-form-page">
+
+    <div class="backbutton">
+        <button class="btn btn-primary" routerLink="/admin-dashboard">Back</button>
+      
+        </div>
+        <div class="jumbotron jumbotron-fluid" style="width: 700px; display:flex; text-align: center; background-color: #333544;">
+            <div class="container">
+              <h2 class="display-6" style=" color:ghostwhite;">Hotel Form</h2>
+            </div>
+          </div>
   <div class="row">
+
     <div class="col-md-6" style="margin: 50px 0px 0px 0px;">
         <form #f="ngForm" (ngSubmit)="save(f.value)">
             <!-- Hotel name-->
             <div class="form-group">
               <label for="title">Hotel Name</label>
               <input #hotelName="ngModel" ngModel name="hotelName" id="title" type="text" class="form-control" required>
-              <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+              <div class="alert alert-danger" *ngIf="hotelName.touched && hotelName.invalid">
                   Title is required
               </div>
             </div>
@@ -19,7 +30,7 @@
                     </div>
             </div>
             <!-- hotel category -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                   <label for="Category">Category</label>
                   <select style="line-height: 2em;" #category="ngModel" ngModel name="category" id="category" class="form-control" required>
                     <option style="line-height: 2em;"  *ngFor="let options of categories" value="option" style="color: black;">
@@ -29,7 +40,7 @@
                   <div class="div alert alert-danger" *ngIf="category.touched && category.invalid">
                     must select category
                   </div>
-            </div>
+            </div> -->
             <!-- hotel address-->
              <div class="form-group">
                     <label for="address">Address</label>
@@ -59,21 +70,21 @@
               </div>
               </div>  
               <!-- submit button -->
-              <button class="btn btn-primary">Add Hotel</button>
+              <button class="btn btn-primary">Submit</button>
           </form>
         </div>
     <!-- hotel card area-->
-        <div class="col-md-5" style="margin: 150px 0px 0 100px;">
-
-        <div class="card" style="width: 34rem;">
-            <img class="card-img-top" [src]="imageUrl.value">
+        <div class="col-md-5" style="margin: 50px 0px 0 100px; padding: 50px 0px 0px 0px;">
+           <div  style=" margin: 0 auto;"> <h3> Hotel Details</h3></div>
+        <div class="card" style="width: 500px;">
+            <img class="card-img-top" [src]="imageUrl.value" style="max-width: 500px; border-radius: 5px;">
             <div class="card-body">
-              <h5 class="card-title">{{ title.value }} </h5>
             </div>
-            <ul class="list-group">
-              <li class="list-group-item">{{country.value}}</li>
-              <li class="list-group-item">{{address.value}}</li>
-              <li class="list-group-item">{{cost.value | currency:'USD':true}}</li>
+            <ul class="list-group"  style="font-size: 16px;">
+                <li class="list-group-item card-title">Name: {{ hotelName.value }} </li>
+              <li class="list-group-item">Country: {{country.value}}</li>
+              <li class="list-group-item">Address: {{address.value}}</li>
+              <li class="list-group-item">cost: {{cost.value | currency:'USD':true}}</li>
             </ul>
             <div class="card-body">
 

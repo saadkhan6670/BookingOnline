@@ -15,6 +15,11 @@ export class LookupService {
     return this._http.post(`${this.global.getServerurl()}get-specific-hotels`,lookupObj);
   }
 
+  GetPopularHotels(){
+    return this._http.get(`${this.global.getServerurl()}get-popular-hotels`);
+  }
+
+
   credtsCheck(Creds) {
    let credsname = "admin";
    let credsPass = "admin";

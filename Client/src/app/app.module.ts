@@ -15,15 +15,19 @@ import { FooterComponent } from './footer/footer.component';
 
 import { AdminHotelsComponent } from './admin/admin-hotels/admin-hotels.component';
 import { HotelFormComponent } from './admin/hotel-form/hotel-form.component';
-
-
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+// import { BookingsComponent } from './admin/bookings/bookings.component';
 import { MatButtonModule } from '@angular/material/button';
 // For MDB Angular Free
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './admin/login/login.component';
 
-import { RatingModule } from 'ngx-bootstrap';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { RatingModule } from 'ngx-bootstrap'; 
+import { BookingsComponent } from './admin/bookings/bookings.component';
+import { DeleteHotelComponent } from './admin/delete-hotel/delete-hotel.component';
+
+
+// import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,9 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     AdminHotelsComponent,
     HotelFormComponent,
     LoginComponent,
-    DashboardComponent,
+    AdminDashboardComponent,
+    BookingsComponent,
+    DeleteHotelComponent
   ],
   imports: [
     BrowserModule,

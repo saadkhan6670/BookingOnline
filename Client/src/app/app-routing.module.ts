@@ -8,8 +8,9 @@ import { ContactComponent }      from './contact/contact.component';
 import { AdminHotelsComponent } from './admin/admin-hotels/admin-hotels.component';
 import { HotelFormComponent } from './admin/hotel-form/hotel-form.component';
 import {LoginComponent} from './admin/login/login.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { BookingsComponent } from './admin/bookings/bookings.component';
 
 
 const routes: Routes = [
@@ -18,9 +19,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'bh-admin', component: LoginComponent },
-  { path: 'admin-dashboard', component: DashboardComponent },
+  { path: 'admin-dashboard', component: AdminDashboardComponent },
   { path: 'admin/admin-hotels', component: AdminHotelsComponent},
   { path: 'admin/hotel-form/new', component: HotelFormComponent },
+  { path: 'admin/bookings', component: BookingsComponent },
 ];
 
 @NgModule({
